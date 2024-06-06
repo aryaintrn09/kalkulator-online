@@ -1,80 +1,26 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
+    background-color: #f8f9fa;
 }
 
-h1, h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.container {
+    margin-top: 50px;
 }
 
-h3 {
-    font-size: 2em;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-p, form {
-    font-size: 1.2em;
-}
-
-input, select {
-    font-size: 1.2em;
-    padding: 5px;
-    margin: 10px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-button {
-    font-size: 1.2em;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-a:hover {
-    text-decoration: underline;
+.calculator {
+    margin: auto;
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    margin-bottom: 20px;
 }
 
-.buttons button {
-    height: 50px;
-    font-size: 18px;
-}
-
-#display {
-    width: 100%;
-    height: 40px;
-    text-align: right;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-#conversion-form, #finance-form {
-    margin-top: 20px;
-}
-
-#conversion-form select, #finance-form input {
-    font-size: 1.2em;
-    padding: 5px;
-    margin: 10px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+button {
+    font-size: 1.5rem;
 }

@@ -1,30 +1,25 @@
 <?php
-include('functions.php');
+session_start();
+require 'db.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
+    echo "Silakan login terlebih dahulu.";
+    exit;
 }
-?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Riwayat Perhitungan</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <h2>Riwayat Perhitungan</h2>
-    <div id="history">
-        <?php
-        $history = getUserHistory($_SESSION['user_id']);
-        while ($row = $history->fetch_assoc()) {
-            echo "<p>{$row['calculation']} = {$row['result']} ({$row['created_at']})</p>";
-        }
-        ?>
-    </div>
-    <a href="export.php">Ekspor Riwayat</a>
-    <br>
-    <a href="calculator.php">Kembali ke Kalkulator</a>
-</body>
-</html>
+$user_id = $_SESSION['user_id'];
+
+$stmt = $conn->prepare("SELECT expression, result, created_at FROM history WHERE user_id = ? ORDER BY created_at DESC");
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$stmt->bind_result($expression, $result, $created_at);
+
+echo "<ul>";
+while ($stmt->fetch()) {
+    echo "<li><strong>$created_at:</strong> $expression = $result</li>";
+}
+echo "</ul>";
+
+$stmt->close();
+$conn->close();
+?>

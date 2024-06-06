@@ -1,26 +1,23 @@
 <?php
-include('functions.php');
+session_start();
+require 'db.php';
 
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
+$user_id = $_SESSION['user_id'];
+
+header('Content-Type: text/csv');
+header('Content-Disposition: attachment; filename="history.csv"');
+
+$output = fopen('php://output', 'w');
+fputcsv($output, array('Expression', 'Result', 'Created At'));
+
+$stmt = $conn->prepare("SELECT expression, result, created_at FROM history WHERE user_id = ?");
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$stmt->bind_result($expression, $result, $created_at);
+
+while ($stmt->fetch()) {
+    fputcsv($output, array($expression, $result, $created_at));
 }
 
-$userId = $_SESSION['user_id'];
-$history = getUserHistory($userId);
-
-$filename = "history_" . date('Ymd') . ".csv";
-header("Content-Description: File Transfer");
-header("Content-Disposition: attachment; filename=$filename");
-header("Content-Type: application/csv;");
-
-$file = fopen('php://output', 'w');
-$header = array("Calculation", "Result", "Created At");
-fputcsv($file, $header);
-
-while ($row = $history->fetch_assoc()) {
-    fputcsv($file, $row);
-}
-fclose($file);
-exit();
+fclose($output);
 ?>
