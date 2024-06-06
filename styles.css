@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+h1, h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p, form {
+    font-size: 1.2em;
+}
+
+input {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
