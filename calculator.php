@@ -45,6 +45,34 @@ if (!isset($_SESSION['user_id'])) {
             <button type="button" data-value="%" class="advanced">%</button>
         </div>
     </form>
+
+    <h3>Konversi Unit</h3>
+    <form id="conversion-form">
+        <input type="number" id="conversion-input" placeholder="Masukkan nilai">
+        <select id="conversion-type">
+            <option value="length">Panjang</option>
+            <option value="weight">Berat</option>
+            <option value="temperature">Suhu</option>
+        </select>
+        <select id="conversion-from">
+            <!-- Opsi akan diisi oleh JavaScript -->
+        </select>
+        <select id="conversion-to">
+            <!-- Opsi akan diisi oleh JavaScript -->
+        </select>
+        <button type="button" id="convert">Konversi</button>
+        <input type="text" id="conversion-result" readonly>
+    </form>
+
+    <h3>Kalkulator Keuangan</h3>
+    <form id="finance-form">
+        <input type="number" id="principal" placeholder="Pokok Pinjaman">
+        <input type="number" id="rate" placeholder="Suku Bunga (%)">
+        <input type="number" id="time" placeholder="Jangka Waktu (tahun)">
+        <button type="button" id="calculate-interest">Hitung Bunga</button>
+        <input type="text" id="interest-result" readonly>
+    </form>
+
     <h3>Riwayat Perhitungan</h3>
     <div id="history">
         <?php
