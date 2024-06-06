@@ -19,10 +19,13 @@ p, form {
     font-size: 1.2em;
 }
 
-input {
+input, select {
     font-size: 1.2em;
     padding: 5px;
     margin: 10px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button {
