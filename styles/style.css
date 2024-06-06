@@ -1,0 +1,28 @@
+/* Custom styles for the application */
+body {
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#calculator {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+button {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.navbar {
+    background-color: #000000; /* Dark background */
+    color: #ffffff; /* Light text */
+}
+
+.ul-tems {
+    padding-left: 70%;
+}

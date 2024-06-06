@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Kalkulator Online</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ul-tems">
+                <li class="nav-item px-1 ">
+                    <a class="btn btn-primary" href="calculator.html">Kalkulator</a>
+                </li>
+                <li class="nav-item px-1 ">
+                    <a class="btn btn-outline-primary" href="unit_conversion.html">Konversi Unit</a>
+                </li>
+                <li class="nav-item px-1 ">
+                    <a class="btn btn-outline-primary" href="financial_calculator.html">Kalkulator Keuangan</a>
+                </li>
+                <li class="nav-item px-1 ">
+                    <a class="btn btn-danger" href="php/logout.php">Keluar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="text-center">Kalkulator</h2>
+        <div id="calculator" class="text-center mb-3">
+            <!-- Konten kalkulator akan ditambahkan di sini -->
+        </div>
+        <h3 class="text-center">Riwayat Perhitungan</h3>
+        <div id="history" class="text-center mb-3">
+            <!-- Riwayat perhitungan akan ditampilkan di sini -->
+        </div>
+        <div class="text-center">
+            <button id="exportCsv" class="btn btn-primary">Ekspor ke CSV</button>
+            <button id="exportPdf" class="btn btn-secondary">Ekspor ke PDF</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="libs/html2pdf.bundle.min.js"></script>
+</body>
+</html>

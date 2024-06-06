@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "kalkulator";
+$dbname = "calculator_app";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
