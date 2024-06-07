@@ -1,11 +1,20 @@
 /* Custom styles for the application */
 body {
-    background-color: #f8f9fa;
+    background-color: #313335;
 }
 
 h1, h2, h3 {
     margin-top: 20px;
     margin-bottom: 20px;
+    color: #ffffff; /* Light text */
+}
+
+.warna{
+    color: black;
+}
+
+p {
+    color: #ffffff; /* Light text */
 }
 
 #calculator {
