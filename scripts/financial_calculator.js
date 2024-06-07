@@ -7,7 +7,7 @@ $(document).ready(function() {
                 <option value="amortization">Amortisasi</option>
                 <option value="investment">Kalkulator Investasi</option>
             </select>
-        </div>
+        </div> 
         <div class="form-group">
             <label for="principal">Jumlah Pokok:</label>
             <input type="number" class="form-control" id="principal">

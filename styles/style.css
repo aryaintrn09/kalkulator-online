@@ -17,6 +17,14 @@ p {
     color: #ffffff; /* Light text */
 }
 
+#financialCalculator{
+    color: #ffffff; /* Light text */
+}
+
+#unitConverter{
+    color: #ffffff; /* Light text */
+}
+
 #calculator {
     margin: 20px auto;
     max-width: 400px;
